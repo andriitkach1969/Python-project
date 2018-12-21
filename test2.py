@@ -1,3 +1,4 @@
+#test2
 ROMANSIGN = [{1: 'I', 4: 'IV', 5: 'V', 9: 'IX'}, {1: 'X', 4: 'XL', 5: 'L', 9: 'XC'},
              {1: 'C', 4: 'CD', 5: 'D', 9: 'CM'}, {1: 'M'}]
 
@@ -53,5 +54,5 @@ arabNumber = int(input("Enter any number in Arab notation (integer, >0 and < 400
 arabToRoman(arabNumber)
 
 print("Convert number in Roman notation to Arab notation")
-#romanStr = str(input("Enter any number in Roman notation: "))
-#romanToArab(romanStr)
+romanStr = str(input("Enter any number in Roman notation: "))
+romanToArab(romanStr)
