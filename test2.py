@@ -2,7 +2,7 @@ ROMANSIGN = [{1: 'I', 4: 'IV', 5: 'V', 9: 'IX'}, {1: 'X', 4: 'XL', 5: 'L', 9: 'X
              {1: 'C', 4: 'CD', 5: 'D', 9: 'CM'}, {1: 'M'}]
 
 
-def isInt(s):
+def isint(s):
     try:
         int(s)
         return True
@@ -11,41 +11,41 @@ def isInt(s):
 
 
 def arabToRoman(number):
-    if (not isInt(number)):
+    if not isint(number):
         print("Not a Arab number")
         return
-    if (number > 0):
+    if number > 0:
         resultStr = ""
         print(number)
         digit = 0
         i = 0
-        while (True):
+        while True:
             digit = number % 10
             number = number // 10
             print("digit - ", digit)
-            if (digit != 0):
+            if digit != 0:
                 tmpStr = ROMANSIGN[i].get(digit, '*')
-                if (tmpStr == '*'):
+                if tmpStr == '*':
                     tmpStr = ''
-                    if (digit in (1, 2, 3)):
+                    if digit in (1, 2, 3):
                         base = 1
-                    elif (digit in (6, 7, 8)):
+                    elif digit in (6, 7, 8):
                         base = 5
                         digit = digit - base + 1
-                    tmpStr = tmpStr + ROMANSIGN[i].get(base, '*')
+                    tmpStr = tmpStr + ROMANSIGN[i][base]
                     for j in range(1, digit):
-                        tmpStr = tmpStr + ROMANSIGN[i].get(1, '*')
+                        tmpStr = tmpStr + ROMANSIGN[i][1]
                 resultStr = tmpStr + resultStr
-                if (number == 0):
-                    break;
-            i += 1;
-        print("this number in Roman notation is: ", resultStr);
+                if number == 0:
+                    break
+            i += 1
+        print("this number in Roman notation is: ", resultStr)
     else:
         print("No a valid Arab number")
 
 
-def romanToArab(str):
-    print(str)
+def romanToArab(arabstr):
+    print(arabstr)
 
 
 print("Convert number in Arab notation to Roman notation")
@@ -53,5 +53,5 @@ arabNumber = int(input("Enter any number in Arab notation: "))
 arabToRoman(arabNumber)
 
 print("Convert number in Roman notation to Arab notation")
-##romanStr = str(input("Enter any number in Roman notation: "))
-##romanToArab(romanStr)
+#romanStr = str(input("Enter any number in Roman notation: "))
+#romanToArab(romanStr)
