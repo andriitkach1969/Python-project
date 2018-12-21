@@ -14,7 +14,7 @@ def arabToRoman(number):
     if not isint(number):
         print("Not a Arab number")
         return
-    if number > 0:
+    if number > 0 and number < 4000:
         resultStr = ""
         print(number)
         digit = 0
@@ -41,7 +41,7 @@ def arabToRoman(number):
             i += 1
         print("this number in Roman notation is: ", resultStr)
     else:
-        print("No a valid Arab number")
+        print("Not a valid Arab number")
 
 
 def romanToArab(arabstr):
@@ -49,7 +49,7 @@ def romanToArab(arabstr):
 
 
 print("Convert number in Arab notation to Roman notation")
-arabNumber = int(input("Enter any number in Arab notation: "))
+arabNumber = int(input("Enter any number in Arab notation (integer, >0 and < 4000): "))
 arabToRoman(arabNumber)
 
 print("Convert number in Roman notation to Arab notation")
