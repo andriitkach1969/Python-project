@@ -1,27 +1,31 @@
-'''
-Check Is number mathimatically simple
-'''
-import math, time
+import math
+import time
 
 
-def findsimplenumber(number):
-    if number>3:
-        for currentnumber in range (3, number):
-            r = range(2, int(math.sqrt(currentnumber)))
-            for i in r:
-                if currentnumber % i == 0:
-                    break
-            else:
-                print("число ", currentnumber, " простое")
-
+def issimple(number):
+    if number in (1, 2, 3):
+        return True
     else:
-        print("введенное число - простое")
+        bound = int(math.sqrt(number)) + 1
+        r = range(2, bound)
+        for j in r:
+            if number % j == 0:
+                break
+        else:
+            return True
+        return False
 
+
+'''
+main module
+'''
 start_time = time.clock()
 
-boundnumber = abs(int(input("Введите любое целое число: ")))
-findsimplenumber(boundnumber)
-
+boundnumber = abs(int(input("Введите любое целое число больше нуля: ")))
+if boundnumber > 0:
+    for i in range(1, boundnumber+1):
+        if issimple(i):
+            print("простое -", i)
 line = 40*"="
-print (line)
-print (time.clock() - start_time, " seconds")
+print(line)
+print(time.clock() - start_time, " seconds")
