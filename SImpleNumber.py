@@ -5,15 +5,14 @@ import time
 def issimple(number):
     if number in (1, 2, 3):
         return True
+    bound = int(math.sqrt(number)) + 1
+    r = range(2, bound)
+    for j in r:
+        if number % j == 0:
+            break
     else:
-        bound = int(math.sqrt(number)) + 1
-        r = range(2, bound)
-        for j in r:
-            if number % j == 0:
-                break
-        else:
-            return True
-        return False
+        return True
+    return False
 
 
 '''
