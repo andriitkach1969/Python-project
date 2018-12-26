@@ -3,16 +3,19 @@ import time
 
 
 def issimple(number):
-    if number in (1, 2, 3):
-        return True
-    bound = int(math.sqrt(number)) + 1
-    r = range(2, bound)
-    for j in r:
-        if number % j == 0:
-            break
-    else:
-        return True
-    return False
+
+    def check(_number):
+        bound = int(math.sqrt(_number)) + 1
+        r = range(2, bound)
+        for j in r:
+            if _number % j == 0:
+                break
+        else:
+            return True
+        return False
+
+    route = {1: True, 2: True, 3: True}
+    return route.get(number, check(number))
 
 
 '''
