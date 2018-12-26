@@ -1,3 +1,6 @@
+'''
+stage 1
+'''
 import math
 import time
 
