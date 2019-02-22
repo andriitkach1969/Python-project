@@ -13,7 +13,7 @@ STR_DESCRIPTION = 'description'
 
 def crack(dictdata, listdata, count=0):
 
-    schemadict = {STR_NAME:'', STR_DESCRIPTION:'', STR_METHOD:'', STR_AUTH:'', STR_REQUEST:'', STR_HEADER:'', STR_URL:'', STR_BODY:''}
+    schemadict = {STR_NAME:'', STR_DESCRIPTION:'', STR_METHOD:'', STR_AUTH:'', STR_HEADER:'', STR_URL:'', STR_BODY:''}
 
     for item in dictdata[STR_ITEM]:
         gcheck = item.get(STR_REQUEST)
@@ -22,10 +22,11 @@ def crack(dictdata, listdata, count=0):
         else:
             idict = schemadict;
             idict[STR_NAME] = item[STR_NAME]
-            idict[STR_DESCRIPTION] = item[STR_REQUEST][STR_DESCRIPTION]
-
+            idict[STR_BODY] = item[STR_REQUEST][STR_BODY]
+            idict[STR_URL] = item[STR_REQUEST][STR_URL]
+            idict[STR_METHOD] = item[STR_REQUEST][STR_METHOD]
+            idict[STR_HEADER] = item[STR_REQUEST][STR_HEADER]
             listdata.append(idict)
-            print(type(item), ' ** ', item)
             count += 1
     return count
 
@@ -41,7 +42,8 @@ if __name__ == "__main__":
     jsonData = json.loads(rawdata)
     totalRoutes = crack(jsonData, resList)
     if totalRoutes != 0:
-        print(resList)
+        for i in resList:
+            print(i)
     else:
         print('error in parsing')
 
