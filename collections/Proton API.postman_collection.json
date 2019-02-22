@@ -1,0 +1,3429 @@
+{
+	"info": {
+		"_postman_id": "0b0f9690-4160-487b-8ad3-7d9e47454c83",
+		"name": "Proton API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "OAuth",
+			"item": [
+				{
+					"name": "Refresh token",
+					"item": [
+						{
+							"name": "Refresh token",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "client_id",
+											"value": "1_7e971E3E5F4Fd5990Acc2Ad134C0099B18D6Ef45E78A9017De",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "c989E96F3C8Cd21C940Ac3Ca75De5752F31C48D9D8D5Fc333A",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "refresh_token",
+											"type": "text"
+										},
+										{
+											"key": "refresh_token",
+											"value": "NzdjNTk4ZGFlYjMwZDU5ODM5ZDZiYWU4MzhiYTMyNmQ3MjU3YjQ1ZTIxYjFjYWYwOTFmMDdjNTRiOWNjMmNjOQ",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "android",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api-host}}/oauth/v2/token",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"oauth",
+										"v2",
+										"token"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Access token",
+					"item": [
+						{
+							"name": "Social",
+							"item": [
+								{
+									"name": "Get token for application user via Facebook",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "client_id",
+													"value": "2_5b811C1B8B04455Abe7019B7Eec064F2Cf898Caf44C959Af5A",
+													"type": "text"
+												},
+												{
+													"key": "client_secret",
+													"value": "3962e02E67E8Dc467B6553Abf14057285D3171C37027C5D85F",
+													"type": "text"
+												},
+												{
+													"key": "grant_type",
+													"value": "https://facebook.com",
+													"type": "text"
+												},
+												{
+													"key": "scope",
+													"value": "ios",
+													"type": "text"
+												},
+												{
+													"key": "facebook_app_user_access_token",
+													"value": "paste here valid facebook user access token",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{api-host}}/oauth/v2/token",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"oauth",
+												"v2",
+												"token"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get token for application user via Google",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "client_id",
+													"value": "2_5b811C1B8B04455Abe7019B7Eec064F2Cf898Caf44C959Af5A",
+													"type": "text"
+												},
+												{
+													"key": "client_secret",
+													"value": "3962e02E67E8Dc467B6553Abf14057285D3171C37027C5D85F",
+													"type": "text"
+												},
+												{
+													"key": "grant_type",
+													"value": "https://google.com",
+													"type": "text"
+												},
+												{
+													"key": "scope",
+													"value": "ios",
+													"type": "text"
+												},
+												{
+													"key": "id_token",
+													"value": "paste here valid googl user id token",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{api-host}}/oauth/v2/token",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"oauth",
+												"v2",
+												"token"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Get token for application",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "client_id",
+											"value": "2_5b811C1B8B04455Abe7019B7Eec064F2Cf898Caf44C959Af5A",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "3962e02E67E8Dc467B6553Abf14057285D3171C37027C5D85F",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "ios",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api-host}}/oauth/v2/token",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"oauth",
+										"v2",
+										"token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get token for application user",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "client_id",
+											"value": "2_5b811C1B8B04455Abe7019B7Eec064F2Cf898Caf44C959Af5A",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "3962e02E67E8Dc467B6553Abf14057285D3171C37027C5D85F",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "ios",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "user1@test.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Qwerty123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api-host}}/oauth/v2/token",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"oauth",
+										"v2",
+										"token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get token for admin",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "client_id",
+											"value": "3_393096ef090F41A81219D704D3Bc0Daf7C4Ad5A82Afd4D1Da8",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "f2C980C4B73207C1Ab31B356Edb5A0491A70Bcfb457B371140",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "web",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "admin@test.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Qwerty123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api-host}}/oauth/v2/token",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"oauth",
+										"v2",
+										"token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get token for manager",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "client_id",
+											"value": "3_393096ef090F41A81219D704D3Bc0Daf7C4Ad5A82Afd4D1Da8",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "f2C980C4B73207C1Ab31B356Edb5A0491A70Bcfb457B371140",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "web",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "admin3@test.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Qwerty123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api-host}}/oauth/v2/token",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"oauth",
+										"v2",
+										"token"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b5e1b759-f912-45d6-b2cb-03dd23efebf7",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "913eb9c8-ae56-4e04-8090-7fd698d48af0",
+						"type": "text/javascript",
+						"exec": [
+							"if (200 == pm.response.code) {",
+							"    pm.environment.set('last_access_token', pm.response.json().access_token);",
+							"}"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "File",
+			"item": [
+				{
+					"name": "Upload new file",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "87a600f0-ab2f-4519-89de-7f13335374e7",
+								"exec": [
+									"if (201 == pm.response.code) {",
+									"    pm.environment.set('last_uploaded_file_id', pm.response.json().id);",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{last_access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "",
+									"type": "file"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api-host}}/api/{{api-version}}/files",
+							"host": [
+								"{{api-host}}"
+							],
+							"path": [
+								"api",
+								"{{api-version}}",
+								"files"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Donatable",
+			"item": [
+				{
+					"name": "Homeless",
+					"item": [
+						{
+							"name": "CRUDL",
+							"item": [
+								{
+									"name": "View homeless info",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{last_access_token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/homelesses/{{last_homeless_id}}",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"homelesses",
+												"{{last_homeless_id}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get homeless list",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{last_access_token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/homelesses",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"homelesses"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create homeless",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "7e5cf569-c0c4-42a0-9af1-45e30803d139",
+												"exec": [
+													"if (201 == pm.response.code) {",
+													"    pm.environment.set('last_homeless_id', pm.response.json().id);",
+													"    pm.environment.set('last_donatable_entity_id', pm.response.json().id);",
+													"}"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{last_access_token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"name\": \"Peter Parker\",\n\t\"story\": \"This a story, about Peter Parker\",\n\t\"profile_photo_id\": \"{{last_uploaded_file_id}}\"\n}"
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/homelesses",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"homelesses"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update homeless",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{last_access_token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"name\": \"Peter Parker 2\",\n\t\"story\": \"This a story, about Peter Parker 2\",\n\t\"profile_photo_id\": \"{{last_uploaded_file_id}}\",\n\t\"edit_version\": 2\n}"
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/homelesses/{{last_homeless_id}}",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"homelesses",
+												"{{last_homeless_id}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete homeless",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											},
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/homelesses/{{last_homeless_id}}",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"homelesses",
+												"{{last_homeless_id}}"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "4ae0de7c-63b7-45e7-82c8-4e7cf7249a23",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "bf1fac79-58b7-4bef-b3f4-6f4d51de51be",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Goal",
+							"item": [
+								{
+									"name": "View goal",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/goals/{{last_homeless_goal_id}}",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"goals",
+												"{{last_homeless_goal_id}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create goal",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "7e5cf569-c0c4-42a0-9af1-45e30803d139",
+												"exec": [
+													"if (201 == pm.response.code) {",
+													"    pm.environment.set('last_homeless_goal_id', pm.response.json().id);",
+													"}"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"title\": \"Warm clothes\",\n\t\"required_budget\": {\n\t\t\"amount\": 100,\n\t\t\"currency\": \"GBP\"\n\t}\n}"
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/homelesses/{{last_homeless_id}}/goals",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"homelesses",
+												"{{last_homeless_id}}",
+												"goals"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update goal",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "7e5cf569-c0c4-42a0-9af1-45e30803d139",
+												"exec": [
+													"if (201 == pm.response.code) {",
+													"    pm.environment.set('last_homeless_goal_id', pm.response.json().id);",
+													"}"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"edit_version\": 1,\n\t\"title\": \"New title\",\n\t\"required_budget\": {\n\t\t\"amount\": 102,\n\t\t\"currency\": \"GBP\"\n\t}\n}"
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/goals/{{last_homeless_goal_id}}",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"goals",
+												"{{last_homeless_goal_id}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete goal",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/goals/{{last_homeless_goal_id}}",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"goals",
+												"{{last_homeless_goal_id}}"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "SubGoal",
+							"item": [
+								{
+									"name": "Create subgoal",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "7e5cf569-c0c4-42a0-9af1-45e30803d139",
+												"exec": [
+													"if (201 == pm.response.code) {",
+													"    pm.environment.set('last_homeless_subgoal_id', pm.response.json().id);",
+													"}"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"title\": \"Warm clothes\",\n\t\"required_budget\": {\n\t\t\"amount\": 100,\n\t\t\"currency\": \"GBP\"\n\t}\n}"
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/goals/{{last_homeless_goal_id}}/subgoals",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"goals",
+												"{{last_homeless_goal_id}}",
+												"subgoals"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update subgoal",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "7e5cf569-c0c4-42a0-9af1-45e30803d139",
+												"exec": [
+													"if (201 == pm.response.code) {",
+													"    pm.environment.set('last_homeless_goal_id', pm.response.json().id);",
+													"}"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"edit_version\": 1,\n\t\"title\": \"New title\",\n\t\"required_budget\": {\n\t\t\"amount\": 102,\n\t\t\"currency\": \"GBP\"\n\t}\n}"
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/subgoals/{{last_homeless_subgoal_id}}",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"subgoals",
+												"{{last_homeless_subgoal_id}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete subgoal",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/subgoals/{{last_homeless_subgoal_id}}",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"subgoals",
+												"{{last_homeless_subgoal_id}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "View subgoal",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/subgoals/{{last_homeless_subgoal_id}}",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"subgoals",
+												"{{last_homeless_subgoal_id}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get subgoals list",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/goals/{{last_homeless_goal_id}}/subgoals?limit=2&offset=0",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"goals",
+												"{{last_homeless_goal_id}}",
+												"subgoals"
+											],
+											"query": [
+												{
+													"key": "limit",
+													"value": "2"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Journey",
+							"item": [
+								{
+									"name": "Create journey",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "7e5cf569-c0c4-42a0-9af1-45e30803d139",
+												"exec": [
+													"if (201 == pm.response.code) {",
+													"    pm.environment.set('last_homeless_journey_id', pm.response.json().id);",
+													"}"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"title\": \"Go to university\",\n\t\"date\": \"2019-09-01\"\n}"
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/homelesses/{{last_homeless_id}}/journeys",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"homelesses",
+												"{{last_homeless_id}}",
+												"journeys"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update journey",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "7e5cf569-c0c4-42a0-9af1-45e30803d139",
+												"exec": [
+													"if (201 == pm.response.code) {",
+													"    pm.environment.set('last_homeless_goal_id', pm.response.json().id);",
+													"}"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"edit_version\": 2,\n\t\"title\": \"Go to university\",\n\t\"date\": \"2019-09-02\",\n\t\"complete\": true\n}"
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/journeys/{{last_homeless_journey_id}}",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"journeys",
+												"{{last_homeless_journey_id}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete journey",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/journeys/{{last_homeless_journey_id}}",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"journeys",
+												"{{last_homeless_journey_id}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "View journey",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/journeys/{{last_homeless_journey_id}}",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"journeys",
+												"{{last_homeless_journey_id}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get journeys list",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/homelesses/{{last_homeless_id}}/journeys?limit=2&offset=0",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"homelesses",
+												"{{last_homeless_id}}",
+												"journeys"
+											],
+											"query": [
+												{
+													"key": "limit",
+													"value": "2"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "9d963b2e-9188-434c-9fb2-98c5c16e676f",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "0effe3f5-d30f-4153-8a39-d8c4bc17ca43",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Favorite",
+							"item": [
+								{
+									"name": "Add to favorite",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/homelesses/{{last_homeless_id}}/favorite",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"homelesses",
+												"{{last_homeless_id}}",
+												"favorite"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Remove favorite",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/homelesses/{{last_homeless_id}}/favorite",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"homelesses",
+												"{{last_homeless_id}}",
+												"favorite"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get favorite homelesses list",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/homelesses/favorites",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"homelesses",
+												"favorites"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "View active goal",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"type": "text",
+										"value": "en"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{last_access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{api-host}}/api/{{api-version}}/homelesses/{{last_homeless_id}}/goals/active",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"api",
+										"{{api-version}}",
+										"homelesses",
+										"{{last_homeless_id}}",
+										"goals",
+										"active"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Scan homeless",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"type": "text",
+										"value": "en"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{last_access_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"address\": \"Baker street 221 b\",\n\t\"location\": {\n\t\t\"longitude\": 51.5210637,\n\t\t\"latitude\": -0.1572457\n\t}\n}"
+								},
+								"url": {
+									"raw": "{{api-host}}/api/{{api-version}}/homelesses/{{last_homeless_id}}/scan",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"api",
+										"{{api-version}}",
+										"homelesses",
+										"{{last_homeless_id}}",
+										"scan"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Charity",
+					"item": [
+						{
+							"name": "CRUDL",
+							"item": [
+								{
+									"name": "Get charity list",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{last_access_token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/charities",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"charities"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "View charity info",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{last_access_token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/charities/{{last_charity_id}}",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"charities",
+												"{{last_charity_id}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create charity",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "7e5cf569-c0c4-42a0-9af1-45e30803d139",
+												"exec": [
+													"if (201 == pm.response.code) {",
+													"    pm.environment.set('last_charity_id', pm.response.json().id);",
+													"    pm.environment.set('last_donatable_entity_id', pm.response.json().id);",
+													"}"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{last_access_token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"name\": \"New charity organization\",\n\t\"story\": \"This a story, new charity organization\",\n\t\"profile_photo_id\": \"{{last_uploaded_file_id}}\",\n\t\"category_id\": \"8413840f-dc21-47a0-b16c-b520ce9553f7\",\n\t\"address\": \"Baker street 221b\",\n\t\"location\": {\n\t\t\"longitude\": 51.5210637,\n\t\t\"latitude\": -0.1572457\n\t}\n}"
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/charities",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"charities"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update charity",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{last_access_token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"name\": \"New charity\",\n\t\"story\": \"This a story, new charity organization\",\n\t\"profile_photo_id\": \"{{last_uploaded_file_id}}\",\n\t\"edit_version\": 3\n}"
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/charities/{{last_charity_id}}",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"charities",
+												"{{last_charity_id}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete charity",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											},
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/charities/{{last_charity_id}}",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"charities",
+												"{{last_charity_id}}"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "4ae0de7c-63b7-45e7-82c8-4e7cf7249a23",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "bf1fac79-58b7-4bef-b3f4-6f4d51de51be",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Category",
+							"item": [
+								{
+									"name": "Get category list",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/charities/categories",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"charities",
+												"categories"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Donation",
+			"item": [
+				{
+					"name": "Donate",
+					"item": [
+						{
+							"name": "Create donation for charity",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "7e5cf569-c0c4-42a0-9af1-45e30803d139",
+										"exec": [
+											"if (201 == pm.response.code) {",
+											"    pm.environment.set('last_donation_id', pm.response.json().id);",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept-Language",
+										"type": "text",
+										"value": "en"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{last_access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"token\": \"tok_visa\",\n\t\"sum\": {\n\t\t\"amount\": 100,\n\t\t\"currency\": \"GBP\"\n\t}\n}"
+								},
+								"url": {
+									"raw": "{{api-host}}/api/{{api-version}}/donations/{{last_charity_id}}/stripe",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"api",
+										"{{api-version}}",
+										"donations",
+										"{{last_charity_id}}",
+										"stripe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create donation for homeless",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "7e5cf569-c0c4-42a0-9af1-45e30803d139",
+										"exec": [
+											"if (201 == pm.response.code) {",
+											"    pm.environment.set('last_donation_id', pm.response.json().id);",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept-Language",
+										"type": "text",
+										"value": "en"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{last_access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"token\": \"tok_visa\",\n\t\"sum\": {\n\t\t\"amount\": 500,\n\t\t\"currency\": \"GBP\"\n\t}\n}"
+								},
+								"url": {
+									"raw": "{{api-host}}/api/{{api-version}}/donations/{{last_homeless_id}}/stripe",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"api",
+										"{{api-version}}",
+										"donations",
+										"{{last_homeless_id}}",
+										"stripe"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "History",
+					"item": [
+						{
+							"name": "Get donation history recrods",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"type": "text",
+										"value": "en"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{last_access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{api-host}}/api/{{api-version}}/donations/{{last_donation_id}}/history",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"api",
+										"{{api-version}}",
+										"donations",
+										"{{last_donation_id}}",
+										"history"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Transfer",
+					"item": [
+						{
+							"name": "Transfer donation",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "7e5cf569-c0c4-42a0-9af1-45e30803d139",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept-Language",
+										"type": "text",
+										"value": "en"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{last_access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{api-host}}/api/{{api-version}}/donations/{{last_donation_id}}/transfer/{{last_donatable_entity_id}}",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"api",
+										"{{api-version}}",
+										"donations",
+										"{{last_donation_id}}",
+										"transfer",
+										"{{last_donatable_entity_id}}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "List",
+					"item": [
+						{
+							"name": "Get donations for homelesses list",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"type": "text",
+										"value": "en"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{last_access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{api-host}}/api/{{api-version}}/donations/homelesses",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"api",
+										"{{api-version}}",
+										"donations",
+										"homelesses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get donations for charities list",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"type": "text",
+										"value": "en"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{last_access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{api-host}}/api/{{api-version}}/donations/charities",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"api",
+										"{{api-version}}",
+										"donations",
+										"charities"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get own donations list",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"type": "text",
+										"value": "en"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{last_access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{api-host}}/api/{{api-version}}/donations/my",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"api",
+										"{{api-version}}",
+										"donations",
+										"my"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "View donation info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"type": "text",
+								"value": "en"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{last_access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api-host}}/api/{{api-version}}/donations/{{last_donation_id}}",
+							"host": [
+								"{{api-host}}"
+							],
+							"path": [
+								"api",
+								"{{api-version}}",
+								"donations",
+								"{{last_donation_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "CRUDL",
+							"item": [
+								{
+									"name": "View admin info",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{last_access_token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/admins/{{last_admin_id}}",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"admins",
+												"{{last_admin_id}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get admin list",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/admins",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"admins"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create admin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "7e5cf569-c0c4-42a0-9af1-45e30803d139",
+												"exec": [
+													"if (201 == pm.response.code) {",
+													"    pm.environment.set('last_admin_id', pm.response.json().id);",
+													"}"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{last_access_token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"email\": \"email5@test.com\",\n\t\"password\": \"Qwerty123\",\n\t\"password_confirmation\": \"Qwerty123\",\n\t\"roles\": [\"ROLE_ADMIN\"]\n}"
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/admins",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"admins"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update admin",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{last_access_token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"email\": \"email4555@test.com\",\n\t\"roles\": [\"ROLE_ADMIN\"],\n\t\"edit_version\": 2\n}"
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/admins/{{last_admin_id}}",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"admins",
+												"{{last_admin_id}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete admin",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											},
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"name\": \"Peter Parker 2\",\n\t\"story\": \"This a story, about Peter Parker 2\",\n\t\"profile_photo_id\": \"708b00b0-40a7-4f62-9cf3-a1acb459c133\"\n}"
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/admins/{{last_admin_id}}",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"admins",
+												"{{last_admin_id}}"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "4ae0de7c-63b7-45e7-82c8-4e7cf7249a23",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "bf1fac79-58b7-4bef-b3f4-6f4d51de51be",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Self update admin",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept-Language",
+										"type": "text",
+										"value": "en"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{last_access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"email656@test.com\",\n\t\"password\": \"Qwerty123\",\n\t\"password_confirmation\": \"Qwerty123\",\n\t\"edit_version\": 1\n}"
+								},
+								"url": {
+									"raw": "{{api-host}}/api/{{api-version}}/admins/me",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"api",
+										"{{api-version}}",
+										"admins",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View own admin profile",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"type": "text",
+										"value": "en"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{last_access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{api-host}}/api/{{api-version}}/admins/me",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"api",
+										"{{api-version}}",
+										"admins",
+										"me"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Profile",
+					"item": [
+						{
+							"name": "Logout",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"type": "text",
+										"value": "en"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{last_access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{api-host}}/api/{{api-version}}/me/logout",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"api",
+										"{{api-version}}",
+										"me",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reset password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"type": "text",
+										"value": "en"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{last_access_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{api-host}}/api/{{api-version}}/reset-password/test@test.com",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"api",
+										"{{api-version}}",
+										"reset-password",
+										"test@test.com"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Application User",
+					"item": [
+						{
+							"name": "Scan",
+							"item": [
+								{
+									"name": "Get last scanned homelesses",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/application-users/me/homelesses/last-scanned",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"application-users",
+												"me",
+												"homelesses",
+												"last-scanned"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get application user homeless scan history",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/application-users/{{last_application_user_id}}/scans/homelesses",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"application-users",
+												"{{last_application_user_id}}",
+												"scans",
+												"homelesses"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get own homeless scan history",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/application-users/me/scans/homelesses",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"application-users",
+												"me",
+												"scans",
+												"homelesses"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Friends",
+							"item": [
+								{
+									"name": "Get application user friends",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/application-users/{{last_application_user_id}}/friends",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"application-users",
+												"{{last_application_user_id}}",
+												"friends"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get last viewed friends list",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/application-users/me/friends/last-viewed",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"application-users",
+												"me",
+												"friends",
+												"last-viewed"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Save factor of friend view",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "7e5cf569-c0c4-42a0-9af1-45e30803d139",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/application-users/{{last_application_user_id}}/view",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"application-users",
+												"{{last_application_user_id}}",
+												"view"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Connections",
+							"item": [
+								{
+									"name": "Get own connections",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/application-users/me/connections?limit=5&offset=0&filter[name]=",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"application-users",
+												"me",
+												"connections"
+											],
+											"query": [
+												{
+													"key": "limit",
+													"value": "5"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "filter[name]",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get own pending connections",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/application-users/me/connections/pending?limit=5&offset=0",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"application-users",
+												"me",
+												"connections",
+												"pending"
+											],
+											"query": [
+												{
+													"key": "limit",
+													"value": "5"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Send connection request",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "7e5cf569-c0c4-42a0-9af1-45e30803d139",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"first_name\": \"Michael\",\n    \"last_name\": \"Jordan\",\n    \"email\": \"jordan@nba.com\",\n    \"password\": \"Qwerty123\",\n    \"password_confirmation\": \"Qwerty123\"\n}"
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/application-users/{{last_application_user_id}}/send-connection-request",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"application-users",
+												"{{last_application_user_id}}",
+												"send-connection-request"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Confirm connection request",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "7e5cf569-c0c4-42a0-9af1-45e30803d139",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"first_name\": \"Michael\",\n    \"last_name\": \"Jordan\",\n    \"email\": \"jordan@nba.com\",\n    \"password\": \"Qwerty123\",\n    \"password_confirmation\": \"Qwerty123\"\n}"
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/application-users/{{last_application_user_id}}/confirm-connection-request",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"application-users",
+												"{{last_application_user_id}}",
+												"confirm-connection-request"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Unfollow connection",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "7e5cf569-c0c4-42a0-9af1-45e30803d139",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept-Language",
+												"type": "text",
+												"value": "en"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{last_access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"first_name\": \"Michael\",\n    \"last_name\": \"Jordan\",\n    \"email\": \"jordan@nba.com\",\n    \"password\": \"Qwerty123\",\n    \"password_confirmation\": \"Qwerty123\"\n}"
+										},
+										"url": {
+											"raw": "{{api-host}}/api/{{api-version}}/application-users/{{last_application_user_id}}/unfollow-connection",
+											"host": [
+												"{{api-host}}"
+											],
+											"path": [
+												"api",
+												"{{api-version}}",
+												"application-users",
+												"{{last_application_user_id}}",
+												"unfollow-connection"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Get own application user profile",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"type": "text",
+										"value": "en"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{last_access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{api-host}}/api/{{api-version}}/application-users/me",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"api",
+										"{{api-version}}",
+										"application-users",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get application user",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"type": "text",
+										"value": "en"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{last_access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{api-host}}/api/{{api-version}}/application-users/{{last_application_user_id}}",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"api",
+										"{{api-version}}",
+										"application-users",
+										"{{last_application_user_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create application user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "7e5cf569-c0c4-42a0-9af1-45e30803d139",
+										"exec": [
+											"if (201 == pm.response.code) {",
+											"    pm.environment.set('last_application_user_id', pm.response.json().id);",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept-Language",
+										"type": "text",
+										"value": "en"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{last_access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\": \"Michael\",\n    \"last_name\": \"Jordan\",\n    \"email\": \"jordan@nba.com\",\n    \"password\": \"Qwerty123\",\n    \"password_confirmation\": \"Qwerty123\"\n}"
+								},
+								"url": {
+									"raw": "{{api-host}}/api/{{api-version}}/application-users",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"api",
+										"{{api-version}}",
+										"application-users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Transfer proton points",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "7e5cf569-c0c4-42a0-9af1-45e30803d139",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept-Language",
+										"type": "text",
+										"value": "en"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{last_access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{api-host}}/api/{{api-version}}/application-users/{{last_application_user_id}}/transfer-proton-points/10",
+									"host": [
+										"{{api-host}}"
+									],
+									"path": [
+										"api",
+										"{{api-version}}",
+										"application-users",
+										"{{last_application_user_id}}",
+										"transfer-proton-points",
+										"10"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "d0ba687d-aae9-4614-b3ee-67329f26524f",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "c35ee9b5-65b8-4e27-a03e-c17f514b5cd9",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "System",
+			"item": [
+				{
+					"name": "Check status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api-host}}/api/{{api-version}}/status",
+							"host": [
+								"{{api-host}}"
+							],
+							"path": [
+								"api",
+								"{{api-version}}",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ac42a0bd-07fe-446f-b79b-19fcbe2677f3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "343aeb95-bb77-4a0a-995f-fbfb029e5d76",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

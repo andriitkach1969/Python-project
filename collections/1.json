@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "af4e8779-3f19-4752-94e5-d2d09a4ba420",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UpdateBookItem",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "cd6e8e30-ba30-4ba1-9558-2aa363466757",
+						"type": "text/javascript",
+						"exec": [
+							"pm.globals.unset(\"var1\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "fd2c4914-370e-45f2-82c6-35f59f74668b",
+						"type": "text/javascript",
+						"exec": [
+							"pm.globals.set(\"var1\", pm.response.status(200))",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "username",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "limit",
+						"value": "10"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\tid:1\n\tname:\"ABCD\"\n}\n"
+				},
+				"url": {
+					"raw": "//URL/v1/book/id",
+					"path": [
+						"",
+						"URL",
+						"v1",
+						"book",
+						"id"
+					]
+				},
+				"description": "Update book item"
+			},
+			"response": []
+		}
+	]
+}
