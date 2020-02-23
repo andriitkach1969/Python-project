@@ -6,7 +6,7 @@ def time_delta(func):
         _start_time = datetime.now()
         func(x)
         _delta_time = datetime.now() - _start_time
-        print('*** ' + func.__name__ + '  took a \t\t\t', _delta_time)
+        print('*** ' + func.__name__ + '\t\t. Call took a ', _delta_time)
     return function_wrapper
 
 
