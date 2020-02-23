@@ -1,11 +1,16 @@
-def deco(func):
+from datetime import datetime
+
+
+def time_delta(func):
     def function_wrapper(x):
-        print('Deco function')
+        _start_time = datetime.now()
         func(x)
+        _delta_time = datetime.now() - _start_time
+        print('*** ' + func.__name__ + '  took a \t\t\t', _delta_time)
     return function_wrapper
 
 
-@deco
+@time_delta
 def f(st):
     print(st)
 
