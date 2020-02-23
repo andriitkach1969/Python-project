@@ -1,6 +1,6 @@
 #import pytest
 
-from SimpleNumber import issimple
+from src.SimpleNumber import issimple
 
 def test_SimpleNumber_trivial():
     assert issimple(3) == True
