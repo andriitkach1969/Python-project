@@ -12,6 +12,5 @@ def res(num):
         return r
 
 
-
 if __name__ == "__main__":
     print(res(5))

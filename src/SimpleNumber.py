@@ -22,7 +22,7 @@ def issimple(number):
 
 
 if __name__ == '__main__':
-    start_time = time.clock()
+    start_time = time.time()
 
     boundnumber = abs(int(input("Введите любое целое число больше нуля: ")))
     if boundnumber > 0:
@@ -31,4 +31,4 @@ if __name__ == '__main__':
                 print("простое -", i)
     line = 40*"="
     print(line)
-    print(time.clock() - start_time, " seconds")
+    print(time.time() - start_time, " seconds")
