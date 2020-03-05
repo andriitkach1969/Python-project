@@ -3,7 +3,7 @@ endWeight = 1000
 stepWeight = 50
 priceStr = input('Please enter the price: ')
 try:
-    price = int(priceStr)
+    price = float(priceStr)
     try:
         for i in range(initWeight, endWeight + stepWeight, stepWeight):
             print(i, i / 1000 * price)
