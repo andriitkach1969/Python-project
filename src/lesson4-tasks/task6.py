@@ -1,4 +1,4 @@
-namesGrid = {'mom': 'mother', 'dad': 'futher', 'sis': 'sister', 'bro': 'brother', 'dude': 'Big Lebovsky'}
+namesGrid = {'mom': 'mother', 'dad': 'futher', 'sis': 'sister', 'bro': 'brother', 'dude': 'Big Lebowski'}
 shortName = input('Please enter a short name: ')
 try:
     fullName = namesGrid[shortName]
